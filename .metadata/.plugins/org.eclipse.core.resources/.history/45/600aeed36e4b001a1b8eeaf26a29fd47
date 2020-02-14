@@ -1,0 +1,46 @@
+package com.example.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class HomeController {
+	
+	@Autowired
+	AlienDAO alienDAO;
+	
+	@RequestMapping("home")
+	public String home() {
+		
+		return "home";
+	}
+	
+	@RequestMapping("add")
+	public String add(@RequestParam("i") String i) {
+		System.out.println("called"+i);
+		return "home";
+	}
+	
+	@RequestMapping("hello")
+	public ModelAndView hello(Alien alien) {
+		ModelAndView v=new ModelAndView();
+		v.setViewName("home");
+		v.addObject("obj",alien);
+		alienDAO.save(alien);
+		return v;
+	}
+
+	
+	@RequestMapping("getAlien")
+	public ModelAndView hello(@RequestParam("aid")String aid) {
+		ModelAndView v=new ModelAndView();
+		v.setViewName("home");
+		v.addObject("obj",alienDAO.findById(Integer.parseInt(aid)));
+		;
+		return v;
+	}
+
+}

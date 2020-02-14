@@ -1,0 +1,48 @@
+
+public class Proxy {
+
+	public static void main(String[] args) {
+		ProxyCP p=new ProxyCP();
+		p.getAccess("sush", "susu");
+		//p.runComm("ls");
+		//p.runComm("rm");
+	}
+}
+
+interface Runner{
+	void runComm(String comm);
+}
+
+class Ae implements Runner{
+	
+	public void runComm(String comm) {
+		System.out.println("running "+comm+" on prompt");
+	}
+}
+
+class ProxyCP implements Runner{
+	
+	Ae e;
+	boolean isAdmin=false;
+	
+	 public void getAccess(String user, String pass) {
+		if("sush".equalsIgnoreCase(user) && "susu".equalsIgnoreCase(pass)) {
+			System.out.println("object created");
+			e=new Ae();
+		}
+		
+		
+	}
+	
+	public void runComm(String comm) {
+		if(isAdmin) {
+			e.runComm(comm);
+		}else {
+			if(comm.startsWith("ls")) {
+				e.runComm(comm);
+			}else {
+			    System.out.println("no permission buddy");
+			}
+		}
+	}
+}

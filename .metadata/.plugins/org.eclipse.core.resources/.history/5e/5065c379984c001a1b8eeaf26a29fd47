@@ -1,0 +1,55 @@
+
+public class InnerClass {
+
+	public static void main(String[] args) {
+		A a=new A();
+		A.B b=a.new B();
+		b.heel();
+		b.n();
+		b.heel();
+		InnerClass in=new InnerClass();
+		in.methodLocalInnerClass();
+		
+	}
+	
+	private Comparable anaonymousInnerClass() {
+		return new Comparable<String>() {
+
+			@Override
+			public int compareTo(String o) {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+		};
+	
+	}
+	
+	private void methodLocalInnerClass() {
+		final int b=1;
+		class C{
+			private void call() {
+				System.out.println(b);
+			}
+		}
+		C c=new C();
+		c.call();
+	}
+	
+}
+class A{
+	
+private int id=7;
+	
+	class B{
+		
+		private int b;
+		
+		public void heel() {
+			System.out.println(id +" is my id "+b);
+		}
+		
+		public void n() {
+			id=9;
+		}
+	}
+}

@@ -1,0 +1,31 @@
+
+public class SingletonClass {
+	
+	private  int i;
+	
+	private  String s;
+	
+	private  SingletonClass singletonClass;
+	
+	private SingletonClass(int i, String s) {
+		
+		this.i=i;
+		this.s=s;
+		
+	}
+	
+	
+	public static SingletonClass getSingletonClass(int i, String s) {
+		if(singletonClass==null) {
+		return new SingletonClass(i,s);
+		}
+		return singletonClass;
+	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return i+s;
+	}
+
+}

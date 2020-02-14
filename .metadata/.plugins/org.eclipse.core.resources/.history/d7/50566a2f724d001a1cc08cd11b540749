@@ -1,0 +1,15 @@
+
+public final class ImmutableClass {
+	
+	private final int[] myArray;
+	
+	public ImmutableClass(int[] a) {
+		myArray=a.clone();
+	}
+	
+	
+	void getArray(){
+		System.out.println(myArray);
+	}
+
+}

@@ -1,0 +1,13 @@
+
+public class OperatorCl {
+	private void psvm() {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public static void main(String[] args) {
+		int i=2^32;
+		System.out.println(i);
+	}
+
+}

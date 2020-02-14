@@ -1,0 +1,50 @@
+
+public class BuilderP {
+	
+	
+	
+	
+	
+
+}
+
+class A{
+	
+private String name;
+	
+	private String tech;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getTech() {
+		return tech;
+	}
+
+	public void setTech(String tech) {
+		this.tech = tech;
+	}
+}
+
+
+class B{
+	
+private String name;
+	
+	private String tech;
+
+	public B setName(String name) {
+		this.name=name;
+		return this;
+	}
+
+	public B setTech(String tech) {
+		this.tech=tech;
+		return this;
+	}
+}

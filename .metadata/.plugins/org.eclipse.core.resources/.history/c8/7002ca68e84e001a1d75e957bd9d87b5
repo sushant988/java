@@ -1,0 +1,19 @@
+
+public class Decorator {
+
+}
+
+interface Car{
+	
+	void fetures();
+}
+
+class BasicCar implements Car{
+
+	@Override
+	public void fetures() {
+		// TODO Auto-generated method stub
+		System.out.println("basddic car");
+	}
+	
+}

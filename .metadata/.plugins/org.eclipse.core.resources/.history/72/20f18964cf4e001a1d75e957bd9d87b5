@@ -1,0 +1,15 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Prototype {
+
+	
+	
+	
+}
+class HeavyWeightClass {
+	
+	private List<String> books=new ArrayList<>();
+	
+	
+}

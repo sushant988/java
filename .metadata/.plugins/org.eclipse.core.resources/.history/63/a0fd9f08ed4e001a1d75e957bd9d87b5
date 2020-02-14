@@ -1,0 +1,87 @@
+
+public class FacadePattern {
+	
+	
+	
+
+}
+class MySQLReport{
+	
+	public static Connection getMySqLcoNNECTION() {
+		return null;
+		
+	}
+	
+	
+	public void generateHTMLReport() {
+		
+	}
+	
+	
+	public void generatePDFReport() {
+		
+	}
+	
+	
+	
+}
+
+class MyPLSQLReport{
+	
+	public static Connection getPLSqLcoNNECTION() {
+		return null;
+		
+	}
+	
+	
+	public void generateHTMLReport() {
+		
+	}
+	
+	
+	public void generatePDFReport() {
+		
+	}
+	
+	
+	
+}
+
+class  FacPattern{
+	public void generateFP(Connection c,View v,String tablename) {
+		Connection conn;
+		
+		switch(c){
+			case MYSQL:{
+				conn=MySQLReport.getMySqLcoNNECTION();
+				MySQLReport rep=new MySQLReport();
+				switch(v){
+					case HTML:{
+						break;
+					}
+					case PDF:{
+						break;
+					}
+				}
+			}
+			case PLSQL:{
+				conn=MySQLReport.getMySqLcoNNECTION();
+				MySQLReport rep=new MySQLReport();
+				switch(v){
+					case HTML:{
+						break;
+					}
+					case PDF:{
+						break;
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+enum Connection{MYSQL,PLSQL};
+
+enum View{PDF,HTML};
+

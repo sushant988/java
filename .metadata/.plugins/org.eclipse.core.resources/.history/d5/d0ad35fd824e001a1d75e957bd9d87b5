@@ -1,0 +1,87 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.Spliterator;
+import java.util.TreeMap;
+import java.util.TreeSet;
+
+public class A {
+	
+	public static void main(String[] args) {
+		//ordered and allows duplicates
+		List l=new ArrayList<>();
+		
+		
+		//Does not allow duplicates and Hash Set is not ordered
+		//LinkedHashSet is ordered
+		//TreeSet is sorted Set , cant add null
+		Set s= new HashSet<>();
+		s.add(3);
+		s.add(4);
+		s.add(9);
+		s.add(9);
+		s.add(6);
+		System.out.println(s);
+		
+		s=new LinkedHashSet<>();
+		s.add(3);
+		s.add(4);
+		s.add(9);
+		s.add(9);
+		s.add(6);
+		System.out.println(s);
+		
+		
+		s=new TreeSet<>();
+		s.add(4);
+		s.add(5);
+		s.add(9);
+		s.add(2);
+		//throws exception
+		//s.add(null);
+		System.out.println(s);
+		
+		
+		
+		Map m=new HashMap<>();
+		m.put("a", "a");
+		m.put(null, null);
+		m.put(null, null);
+		m.put("b", "b");
+		System.out.println(m);
+		
+		
+		m=new LinkedHashMap<>();
+		m.put("a", "a");
+		m.put(null, null);
+		m.put(null, null);
+		System.out.println(m);
+		
+		
+		
+		m=new TreeMap<>();
+		m.put("a", "a");
+		//throws exception
+		//m.put(null, null);
+	
+		System.out.println(m);
+		
+		
+Set s4=	m.keySet();
+Spliterator<String> it=s4.spliterator();
+System.out.println(it.SORTED);
+
+		
+		
+		
+		
+		
+	}
+
+}

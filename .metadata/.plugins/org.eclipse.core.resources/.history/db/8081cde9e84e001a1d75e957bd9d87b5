@@ -1,0 +1,54 @@
+
+public class Decorator {
+
+}
+
+interface Car{
+	
+	void fetures();
+}
+
+class BasicCar implements Car{
+	
+	public BasicCar(Car c) {
+		
+	}
+
+	@Override
+	public void fetures() {
+		// TODO Auto-generated method stub
+		System.out.println("basddic car");
+	}
+	
+}
+
+class DecoratorP extends  BasicCar{
+
+	public DecoratorP(Car c) {
+		super(c);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void fetures() {
+		super.fetures();
+		
+	}
+	
+}
+
+class SportsCar extends  BasicCar{
+
+	public DecoratorP(Car c) {
+		super(c);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void fetures() {
+		super.fetures();
+		System.out.println("sports car");
+		
+	}
+	
+}

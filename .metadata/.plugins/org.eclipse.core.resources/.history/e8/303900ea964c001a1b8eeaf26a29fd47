@@ -1,0 +1,14 @@
+
+public class InnerClass {
+
+	private int id=7;
+	
+	class A{
+		
+		private int b;
+		
+		private void heel() {
+			System.out.println(is +" is my id "+b);
+		}
+	}
+}

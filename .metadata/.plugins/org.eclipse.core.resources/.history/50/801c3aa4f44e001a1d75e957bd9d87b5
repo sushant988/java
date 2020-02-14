@@ -1,0 +1,11 @@
+
+public class Proxy {
+
+}
+
+class A{
+	
+	public void runCommand(String comm) {
+		System.out.println("running "+comm+" on prompt");
+	}
+}

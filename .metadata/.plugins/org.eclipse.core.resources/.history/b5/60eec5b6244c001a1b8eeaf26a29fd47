@@ -1,0 +1,12 @@
+package com.repo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class AlienRepo {
+
+	public AlienRep() {
+		List<Alien> list=new ArrayList<>();
+		
+	}
+}

@@ -1,0 +1,32 @@
+
+public class FacadePattern {
+	
+	
+	
+
+}
+class MySQLReport{
+	
+	public static Connection getMySqLcoNNECTION() {
+		return null;
+		
+	}
+	
+	
+	public void generateHTMLReport() {
+		
+	}
+	
+	
+	public void generatePDFReport() {
+		
+	}
+	
+	
+	
+}
+
+enum Connection{MYSQL,PLSQL};
+
+enum View{PDF,HTML};
+

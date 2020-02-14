@@ -1,0 +1,28 @@
+
+public class OperatorCl {
+	private void psvm() {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public static void main(String[] args) {
+		int i=2147483647;
+		Integer i1=i;
+		i1++;
+		System.out.println(i1);
+		i=i+1;
+		System.out.println(i);
+		i=i+1;
+		
+		int k=Integer.MAX_VALUE;
+		System.out.println(k);
+		
+		System.out.println(i);
+		int x =1;
+		x+=2*5;
+		x=1*2+3%4;
+		System.out.println(x);
+		
+	}
+
+}

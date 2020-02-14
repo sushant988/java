@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Prototype {
+
+	
+	
+	
+}
+class HeavyWeightClass implements Cloneable {
+	
+	private List<String> books=new ArrayList<>();
+	
+	
+	private void load() {
+		for (int i=0;i<10;i++){
+			books.add("book"+i);
+		}
+	}
+	
+	
+	
+	
+	
+}

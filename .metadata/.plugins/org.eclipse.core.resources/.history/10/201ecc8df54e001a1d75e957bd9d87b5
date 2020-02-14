@@ -1,0 +1,41 @@
+
+public class Proxy {
+
+	public static void main(String[] args) {
+		Proxy p=new Proxy();
+		p.
+	}
+}
+
+class Ae{
+	
+	public void runCommand(String comm) {
+		System.out.println("running "+comm+" on prompt");
+	}
+}
+
+class ProxyCP{
+	
+	Ae e;
+	boolean isAdmin=false;
+	
+	 public void getAccess(String user, String pass) {
+		if("sush".equalsIgnoreCase(user) && "susu".equalsIgnoreCase("susha")) {
+			e=new Ae();
+		}
+		
+		
+	}
+	
+	private void runComm(String comm) {
+		if(isAdmin) {
+			e.runCommand(comm);
+		}else {
+			if(comm.startsWith("ls")) {
+				e.runCommand(comm);
+			}else {
+			    System.out.println("no permission buddy");
+			}
+		}
+	}
+}

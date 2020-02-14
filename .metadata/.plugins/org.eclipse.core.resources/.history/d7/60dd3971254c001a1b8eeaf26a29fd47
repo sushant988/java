@@ -1,0 +1,28 @@
+package com.repo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.example.demo.Alien;
+
+public class AlienRepo {
+
+	public AlienRepo() {
+		List<Alien> list=new ArrayList<>();
+		Alien a1=new Alien();
+		a1.setAid(101);
+		a1.setAname("name");
+		a1.setTech("Java");
+		
+		Alien a2=new Alien();
+		a2.setAid(102);
+		a2.setAname("name");
+		a2.setTech("Java");
+		
+		Alien a3=new Alien();
+		a3.setAid(103);
+		a3.setAname("name");
+		a3.setTech("Java");
+		
+	}
+}

@@ -1,0 +1,22 @@
+
+public class CompositePattern {
+	
+	
+
+}
+
+
+interface Component{
+	void showPrice();
+}
+
+class Leaf{
+	
+	
+}
+
+
+class Composite{
+	
+	
+}

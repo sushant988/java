@@ -1,0 +1,92 @@
+
+public class InnerClass {
+	
+	static class InnerCl{
+		void test() {
+			
+		}
+	}
+
+	private String str;
+	public static void main(String[] args) {
+		A a=new A();
+		A.B b=a.new B();
+		b.heel();
+		b.n();
+		b.heel();
+		InnerClass in=new InnerClass();
+		in.methodLocalInnerClass();
+		System.out.println(in.anaonymousInnerClass());
+		InnerClass.InnerCl cl=new InnerClass.InnerCl();
+		cl.test();
+	}
+	
+	private Comparable anaonymousInnerClass() {
+		return new Comparable<String>() {
+
+			@Override
+			public int compareTo(String o) {
+				// TODO Auto-generated method stub
+				if(o==null || str==null) {
+					return -1;
+				}else if (o!=null && str!=null && o.equalsIgnoreCase(str)) {
+					return 0;
+				}
+				return o.compareTo(str);
+			}
+		};
+	
+	}
+	
+	private void methodLocalInnerClass() {
+		final int b=1;
+		class C{
+			private void call() {
+				System.out.println(b);
+			}
+		}
+		C c=new C();
+		c.call();
+	}
+	
+}
+class A{
+	
+private int id=7;
+
+private class V{
+	
+}
+
+protected class V1{
+	
+}
+
+public strictfp class V9{
+	
+}
+
+public abstract class V4{
+	
+}
+public class V2{
+	
+}
+
+public final class V3{
+	
+}
+	
+	class B{
+		
+		private int b;
+		
+		public void heel() {
+			System.out.println(id +" is my id "+b);
+		}
+		
+		public void n() {
+			id=9;
+		}
+	}
+}

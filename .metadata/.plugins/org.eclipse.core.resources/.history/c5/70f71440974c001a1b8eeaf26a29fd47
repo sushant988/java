@@ -1,0 +1,28 @@
+
+public class InnerClass {
+
+	public static void main(String[] args) {
+		A a=new A();
+		A.B b=a.new B();
+		
+		
+	}
+	
+}
+class A{
+	
+private int id=7;
+	
+	class B{
+		
+		private int b;
+		
+		private void heel() {
+			System.out.println(id +" is my id "+b);
+		}
+		
+		private void n() {
+			id=9;
+		}
+	}
+}

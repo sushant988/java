@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Prototype {
+
+	public static void main(String[] args) {
+		HeavyWeightClass cl=new HeavyWeightClass();
+		cl.load();
+		HeavyWeightClass cl1=cl.clone();
+		System.out.println(cl1.toString());
+	}
+	
+	
+}
+class HeavyWeightClass implements Cloneable {
+	
+	private List<String> books=new ArrayList<>();
+	
+	
+	public void load() {
+		for (int i=0;i<10;i++){
+			books.add("book"+i);
+		}
+	}
+	
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		// TODO Auto-generated method stub
+		return super.clone();
+	}
+	
+	
+	
+	
+}

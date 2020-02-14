@@ -1,0 +1,26 @@
+import java.util.Collection;
+import java.util.Collections;
+
+public final class ImmutableClass {
+	
+	private final int[] myArray;
+	
+	public ImmutableClass(int[] a) {
+		myArray=a;
+	}
+	
+	
+	void getArray(){
+		for(int a:myArray) {
+			System.out.println(a);
+			}
+		}
+	
+	public static void main(String[] args) {
+		int a[]= {2,3};
+		ImmutableClass m=new ImmutableClass(a);
+		a[1]= 5;
+		m.getArray();
+	}
+
+}

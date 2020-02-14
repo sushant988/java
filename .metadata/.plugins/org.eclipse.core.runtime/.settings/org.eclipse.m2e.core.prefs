@@ -1,0 +1,10 @@
+eclipse.m2.autoUpdateProjects=true
+eclipse.m2.defaultRuntime=apache-maven-3.6.3
+eclipse.m2.downloadJavadoc=true
+eclipse.m2.hideFoldersOfNestedProjects=true
+eclipse.m2.runtimes=apache-maven-3.6.3
+eclipse.m2.runtimesNodes/apache-maven-3.6.3/location=C\:\\Users\\svaddaram\\Downloads\\apache-maven-3.6.3-bin\\apache-maven-3.6.3
+eclipse.m2.runtimesNodes/apache-maven-3.6.3/type=EXTERNAL
+eclipse.m2.updateIndexes=true
+eclipse.m2.updateProjects=true
+eclipse.preferences.version=1
