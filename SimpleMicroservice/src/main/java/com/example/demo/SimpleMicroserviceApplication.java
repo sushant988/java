@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-@EnableConfigServer
+@EnableConfigServer()
 public class SimpleMicroserviceApplication {
 	
 	@Autowired
