@@ -1,8 +1,0 @@
-
-spring.mvc.view.prefix=/pages/
-spring.mvc.view.suffix=.jsp
-server.port=65001
-
-spring.h2.console.enabled=true
-spring.datasource.platform=h2
-spring.datasource.url=hdbc:h2:mem:navin

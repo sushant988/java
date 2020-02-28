@@ -22,9 +22,11 @@ public class SimpleMicroserviceApplication {
 	
 	@RequestMapping("/limit-service")
 	public Limits getLimitService() {
+		
 		Limits l=new Limits();
 		l.setMaximum(limits.getMaximum());
 		l.setMinimum(limits.getMinimum());
+		System.out.println(limits.getMaximum());
 		return l;
 	}
 
